@@ -4,7 +4,7 @@ import { css } from "emotion";
 const styles = {
   width: '200px',
   height: '300px',
-  backgroundColor: 'red',
+  backgroundColor: 'grey',
   img: {
     objectFit: 'cover'
   }

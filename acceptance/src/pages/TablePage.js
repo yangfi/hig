@@ -6,6 +6,8 @@ import Toggle from "@hig/toggle";
 import Surface from "@hig/surface";
 import RadioButton from "@hig/radio-button";
 import { ThemeContext } from "@hig/theme-context";
+import Badge from "@hig/badge";
+
 // import Table from "table-test/build/index";
 import Table from "@hig/table";
 import lightGrayMediumDensityTheme from '@hig/theme-data/build/json/lightGrayMediumDensityTheme/theme.json';

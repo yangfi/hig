@@ -3,8 +3,9 @@ import Tile from '@hig/tile';
 import Spacer from "@hig/spacer";
 import Dropdown from "@hig/dropdown";
 import Label from "@hig/label";
+import Badge from "@hig/badge";
 
-import { Alert16, Complete16, Download16, Edit16, MoreVertical16, Archive16, Alert24, Complete24, Download24, Edit24, MoreVertical24, Archive24 } from "@hig/icons"
+import { Alert16, Complete16, Download16, Edit16, MoreVertical16, Alert24, Complete24, Download24, Edit24, MoreVertical24, FileImage16, FileImage24} from "@hig/icons"
 
 import ImageHolder from '../fixtures/tile/ImageHolder';
 import ThemeRepeater from '../components/ThemeRepeater';
@@ -16,9 +17,9 @@ function TilePage() {
   const [divider, setDivider] = useState(false);
   const getDivider = colorSchemeId => colorSchemeId?.includes("light") ? "#1a1f25" : "white";
   const [version, setVersion] = useState(false);
-  const getVersion = isMediumDensity => isMediumDensity ? <Complete24 /> : <Complete16 />;
+  const getVersion = isMediumDensity => isMediumDensity ? <Badge size="l" variant="text" label="V1" /> : <Badge size="s" variant="text" label="V1" />;
   const [identifier, setIdentifier] = useState(false);
-  const getIdentifier = isMediumDensity => isMediumDensity ? <Archive24 /> : <Archive16 />;
+  const getIdentifier = isMediumDensity => isMediumDensity ? <FileImage24 /> : <FileImage16 />;
   const getStatusAndActionIcons = isMediumDensity => [
     {type: 'status', icon: isMediumDensity ? <Alert24 /> : <Alert16 />}, 
     {type: 'status', icon: isMediumDensity ? <Complete24 /> : <Complete16 />}, 
@@ -26,7 +27,7 @@ function TilePage() {
     {type: 'action', icon: isMediumDensity ? <Download24 /> : <Download16 />, action: () => {console.log('testing edit')}}
   ];
   const [status, setStatus] = useState(false);
-  const getNotification = isMediumDensity => ({type: 'pill', component: isMediumDensity ? <Complete24 /> : <Complete16 />});
+  const getNotification = isMediumDensity => ({type: 'pill', component: isMediumDensity ? <Badge size="l" icon={<Complete24 />} variant="icon" /> : <Badge size="s" icon={<Complete16 />} variant="icon" />});
   const [notification, setNotification] = useState(false);
   const tooltip = 'click here';
   const getOverflowMenu = isMediumDensity => isMediumDensity ? <MoreVertical24 /> : <MoreVertical16 />; 
@@ -307,7 +308,6 @@ function TilePage() {
       </div>
       <ThemeRepeater>{({id, level, theme}) => {
         const isMediumDensity = theme.metadata.densityId === `medium-density`;
-        console.log('themer', theme)
         return (
           <>
             <Tile 
