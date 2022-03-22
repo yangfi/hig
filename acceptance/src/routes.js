@@ -1,5 +1,6 @@
 import AccordionPage from "./pages/AccordionPage";
 import AvatarPage from "./pages/AvatarPage";
+import BadgePage from "./pages/BadgePage";
 import BannerPage from "./pages/BannerPage";
 import ButtonsPage from "./pages/ButtonsPage";
 import FlyoutPage from "./pages/FlyoutPage";
@@ -29,8 +30,9 @@ import TypographyPage from "./pages/TypographyPage";
 export default [
   { path: "/accordion/", component: AccordionPage, label: "Accordion" },
   { path: "/avatar/", component: AvatarPage, label: "Avatar" },
-  { path: "/button/", component: ButtonsPage, label: "Button" },
+  { path: "/badge/", component: BadgePage, label: "Badge" },
   { path: "/banner/", component: BannerPage, label: "Banner" },
+  { path: "/button/", component: ButtonsPage, label: "Button" },
   { path: "/dropdown/", component: DropdownPage, label: "Dropdown" },
   { path: "/flyout/", component: FlyoutPage, label: "Flyout" },
   { path: "/checkbox/", component: CheckboxPage, label: "Checkbox" },
